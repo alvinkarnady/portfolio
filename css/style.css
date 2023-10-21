@@ -479,6 +479,10 @@ span {
 }
 
 @media (max-width: 768px) {
+  * {
+    font-family: "Poppins";
+  }
+
   #menu-icon {
     display: block;
   }
@@ -518,10 +522,10 @@ span {
   }
 
   .home-img img {
-    width: 50vw;
+    width: 70vw;
     margin-top: 4rem;
+    margin-bottom: 15rem;
   }
-
   .about {
     flex-direction: column-reverse;
   }
