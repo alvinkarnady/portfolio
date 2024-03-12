@@ -1,3 +1,23 @@
+
+// EMAILJS
+
+function sendMail() {
+    let parms = {
+        name: document.getElementById("name").value,
+        subject: document.getElementById("subject").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+    }
+    emailjs.send("service_o3idppd", "template_m20172z", parms).then(alert("Email Sent!!!"))
+}
+
+
+
+
+
+
+
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -21,7 +41,7 @@ window.onscroll = () => {
         let height = sec.offsetHeight;
         let id = sec.getAttribute('id');
 
-        if(top >= offset && top < offset + height) {
+        if (top >= offset && top < offset + height) {
             navLinks.forEach(links => {
                 links.classList.remove('active');
                 document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
@@ -43,7 +63,7 @@ window.onscroll = () => {
 
 
 // scroll reveal
-ScrollReveal({ 
+ScrollReveal({
     reset: true,
     distance: '80px',
     duration: 2000,
@@ -57,7 +77,7 @@ ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
 // typed js
 const typed = new Typed('.multiple-text', {
-    strings: ['Frontend Developer', 'Youtuber', 'Blogger'],
+    strings: ['Web Developer', 'Design Creator'],
     typeSpeed: 100,
     backSpeed: 100,
     backDelay: 1000,
