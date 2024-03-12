@@ -556,6 +556,7 @@ span {
 
 @media (max-width: 450px) {
   html {
+    font-family: "Poppins", sans-serif;
     font-size: 50%;
   }
 
