@@ -8,7 +8,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins", sans-serif;
+  font-family: "Poppins";
 }
 
 :root {
@@ -27,6 +27,83 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
+
+/* Dark Mode */
+body.dark-mode {
+  background-color: #ffffff;
+  color: #1f242d;
+}
+
+.dark-mode .about {
+  background: #f0ecec;
+  color: var(--bg-color);
+}
+.dark-mode .portfolio {
+  background: #f0ecec;
+  color: var(--bg-color);
+}
+
+/* .dark-mode .about-img.dark-mode {
+  display: none;
+}
+.light-mode .about-img.light-mode {
+  display: none;
+} */
+
+/* light and dark mode */
+
+.theme-switch-wrapper {
+  display: flex;
+  align-items: center;
+
+  /* margin-top: 20px;
+  margin-bottom: 20px; */
+  /* margin-left: 200px; */
+}
+
+.theme-switch {
+  display: inline-block;
+  height: 23px;
+  position: relative;
+  width: 50px;
+}
+
+.theme-switch input {
+  display: none;
+}
+
+.slider {
+  background-color: #ccc;
+  border-radius: 34px;
+  bottom: 0;
+  cursor: pointer;
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  transition: 0.4s;
+}
+
+.slider:before {
+  background-color: #fff;
+  border-radius: 50%;
+  bottom: 4px;
+  content: "";
+  height: 15px;
+  left: 4px;
+  position: absolute;
+  transition: 0.4s;
+  width: 15px;
+}
+
+input:checked + .slider {
+  background-color: var(--main-color);
+}
+
+input:checked + .slider:before {
+  transform: translateX(26px);
+}
+/* light and dark mode */
 
 section {
   min-height: 100vh;
@@ -191,6 +268,7 @@ span {
   justify-content: center;
   align-items: center;
   gap: 2rem;
+  color: var(--text-color);
   background: var(--second-bg-color);
 }
 
@@ -203,6 +281,9 @@ span {
 .heading {
   text-align: center;
   font-size: 4.5rem;
+}
+.about-content {
+  margin-bottom: 5rem;
 }
 
 .about-content h2 {
@@ -223,6 +304,18 @@ span {
   margin-bottom: 5rem;
 }
 
+/* CSS untuk ikon */
+.icon-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 20px 0;
+}
+.icon-container img {
+  width: 50px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
+  height: 50px;
+  margin: 0 10px;
+}
 .services-container {
   display: flex;
   justify-content: center;
@@ -234,6 +327,7 @@ span {
 .services-container .services-box {
   flex: 1 1 30rem;
   background: var(--second-bg-color);
+  color: var(--text-color);
   padding: 3rem 2rem 4rem;
   border-radius: 2rem;
   text-align: center;
@@ -262,6 +356,7 @@ span {
 
 .portfolio {
   background: var(--second-bg-color);
+  color: var(--text-color);
 }
 
 .portfolio h2 {
@@ -383,6 +478,7 @@ span {
   align-items: center;
   flex-wrap: wrap;
   padding: 2rem 9%;
+  color: var(--text-color);
   background: var(--second-bg-color);
 }
 
@@ -482,6 +578,12 @@ span {
   * {
     font-family: "Poppins";
   }
+  body {
+    overflow-x: hidden; /* Menyembunyikan scroll horizontal */
+  }
+  .home {
+    padding-top: 12rem;
+  }
 
   #menu-icon {
     display: block;
@@ -511,6 +613,7 @@ span {
 
   .home {
     flex-direction: column;
+    margin-bottom: 25rem;
   }
 
   .home-content h3 {
@@ -521,11 +624,21 @@ span {
     font-size: 3.5rem;
   }
 
-  .home-img img {
-    width: 50vw;
-    margin-top: 4rem;
-    margin-bottom: 15rem;
+  .home-img {
+    display: flex;
+    justify-content: center; /* Memposisikan gambar di tengah secara horizontal */
+    align-items: center; /* Memposisikan gambar di tengah secara vertikal */
+    margin-top: 8rem;
+    margin-bottom: 3rem;
   }
+
+  .home-img img {
+    max-width: 100%; /* Menghindari gambar melebihi lebar parent */
+    max-height: 100%; /* Menghindari gambar melebihi tinggi parent */
+    width: auto; /* Menyesuaikan lebar gambar dengan lebar aslinya */
+    height: auto; /* Menyesuaikan tinggi gambar dengan tinggi aslinya */
+  }
+
   .about {
     flex-direction: column-reverse;
   }
@@ -556,7 +669,6 @@ span {
 
 @media (max-width: 450px) {
   html {
-    font-family: "Poppins", sans-serif;
     font-size: 50%;
   }
 

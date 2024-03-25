@@ -1,4 +1,38 @@
 
+
+
+
+// typed js
+const typed = new Typed('.multiple-text', {
+    strings: ['Web Developer', 'Graphic Designer'],
+    typeSpeed: 100,
+    backSpeed: 100,
+    backDelay: 1000,
+    loop: true
+});
+
+
+
+// light dark mode
+
+const checkbox = document.querySelector('input[type="checkbox"]');
+
+checkbox.addEventListener("change", function () {
+    if (this.checked) {
+        document.body.classList.add("dark-mode");
+        // document.body.classList.remove("light-mode");
+
+    } else {
+        // document.body.classList.add("light-mode");
+        document.body.classList.remove("dark-mode");
+
+    }
+});
+
+
+
+
+
 // EMAILJS
 
 function sendMail() {
@@ -18,6 +52,8 @@ function sendMail() {
 
 
 
+
+
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -26,6 +62,8 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+
 
 
 // scroll sections active link 
@@ -75,11 +113,4 @@ ScrollReveal().reveal('.home-img, .services-container, .portfolio-box, .contact 
 ScrollReveal().reveal('.home-content h1, .about-img', { origin: 'left' });
 ScrollReveal().reveal('.home-content p, .about-content', { origin: 'right' });
 
-// typed js
-const typed = new Typed('.multiple-text', {
-    strings: ['Web Developer', 'Design Creator'],
-    typeSpeed: 100,
-    backSpeed: 100,
-    backDelay: 1000,
-    loop: true
-});
+
