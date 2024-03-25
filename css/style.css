@@ -223,8 +223,6 @@ span {
 }
 .social-media {
   display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .social-media a {
   display: inline-flex;
