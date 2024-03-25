@@ -8,7 +8,7 @@
   border: none;
   outline: none;
   scroll-behavior: smooth;
-  font-family: "Poppins";
+  font-family: "Poppins", "Josefin Sans", sans-serif;
 }
 
 :root {
@@ -221,10 +221,15 @@ span {
 .home-content p {
   font-size: 1.6rem;
 }
-
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .social-media a {
   display: inline-flex;
   justify-content: center;
+  flex-direction: row; /* Mengatur agar ikon sebaris */
   align-items: center;
   width: 4rem;
   height: 4rem;
@@ -307,14 +312,15 @@ span {
 /* CSS untuk ikon */
 .icon-container {
   display: flex;
-  justify-content: space-around;
+  flex-wrap: wrap; /* Mengatur agar barisan ikon bungkus ke baris baru saat ruang tidak mencukupi */
+  justify-content: center; /* Mengatur agar ikon berada di tengah-tengah */
   align-items: center;
   margin: 20px 0;
 }
 .icon-container img {
   width: 50px; /* Sesuaikan ukuran ikon sesuai kebutuhan */
   height: 50px;
-  margin: 0 10px;
+  margin: 10px 10px;
 }
 .services-container {
   display: flex;
@@ -633,8 +639,8 @@ span {
   }
 
   .home-img img {
-    max-width: 100%; /* Menghindari gambar melebihi lebar parent */
-    max-height: 100%; /* Menghindari gambar melebihi tinggi parent */
+    max-width: 95%; /* Menghindari gambar melebihi lebar parent */
+    max-height: 95%; /* Menghindari gambar melebihi tinggi parent */
     width: auto; /* Menyesuaikan lebar gambar dengan lebar aslinya */
     height: auto; /* Menyesuaikan tinggi gambar dengan tinggi aslinya */
   }
