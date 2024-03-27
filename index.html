@@ -124,10 +124,11 @@
           ></a>
         </div>
         <a
-          href="cv/ENGLISH-CV-Alvin.pdf"
-          download="ENGLISH-CV-Alvin.pdf"
+          href=""
+
           target="_blank"
           class="btn"
+          onclick="downloadFile()"
           >Download CV</a
         >
       </div>
@@ -410,13 +411,19 @@
 
 
 
-    <!-- scroll reveal -->
-    <script src="https://unpkg.com/scrollreveal"></script>
 
-    <!-- typed js -->
-    <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
-
-    <!-- custom js    -->
-    <script src="js/script.js"></script>
   </body>
+  <script>
+    function downloadFile() {
+       window.open("cv/ENGLISH-CV-Alvin.pdf")
+    }
+ </script>
+      <!-- scroll reveal -->
+      <script src="https://unpkg.com/scrollreveal"></script>
+
+      <!-- typed js -->
+      <script src="https://unpkg.com/typed.js@2.0.14/dist/typed.umd.js"></script>
+  
+      <!-- custom js    -->
+      <script src="js/script.js"></script>
 </html>
