@@ -1,5 +1,13 @@
-// EMAILJS
 
+document.getElementById('contactForm').addEventListener('submit', function (event) {
+    event.preventDefault(); // Prevent default form submission
+
+    sendMail(); // Call sendMail function
+
+    // You can add additional code here, such as showing a loading spinner
+});
+
+// EMAILJS
 function sendMail() {
     let parms = {
         name: document.getElementById("name").value,
@@ -12,7 +20,7 @@ function sendMail() {
         .then(function (response) {
             alert("Email Sent!!!");
         }, function (error) {
-            alert("Email failed to send. Please try again later.");
+            alert("Email failed to send. Please try again later or Click Gmail Icon in home page!.");
             console.error('Error sending email:', error);
         });
 }
