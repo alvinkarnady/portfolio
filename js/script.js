@@ -1,3 +1,15 @@
+// EMAILJS
+
+function sendMail() {
+    let parms = {
+        name: document.getElementById("name").value,
+        subject: document.getElementById("subject").value,
+        email: document.getElementById("email").value,
+        phone: document.getElementById("phone").value,
+        message: document.getElementById("message").value
+    }
+    emailjs.send("service_o3idppd", "template_m20172z", parms).then(alert("Email Sent!!!"))
+}
 
 
 
@@ -33,18 +45,6 @@ checkbox.addEventListener("change", function () {
 
 
 
-// EMAILJS
-
-function sendMail() {
-    let parms = {
-        name: document.getElementById("name").value,
-        subject: document.getElementById("subject").value,
-        email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
-        message: document.getElementById("message").value
-    }
-    emailjs.send("service_o3idppd", "template_m20172z", parms).then(alert("Email Sent!!!"))
-}
 
 
 
