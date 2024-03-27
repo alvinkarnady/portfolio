@@ -8,9 +8,14 @@ function sendMail() {
         phone: document.getElementById("phone").value,
         message: document.getElementById("message").value
     }
-    emailjs.send("service_o3idppd", "template_m20172z", parms).then(alert("Email Sent!!!"))
+    emailjs.send("service_o3idppd", "template_m20172z", parms)
+        .then(function (response) {
+            alert("Email Sent!!!");
+        }, function (error) {
+            alert("Email failed to send. Please try again later.");
+            console.error('Error sending email:', error);
+        });
 }
-
 
 
 
@@ -22,7 +27,6 @@ const typed = new Typed('.multiple-text', {
     backDelay: 1000,
     loop: true
 });
-
 
 
 // light dark mode
@@ -42,18 +46,6 @@ checkbox.addEventListener("change", function () {
 });
 
 
-
-
-
-
-
-
-
-
-
-
-
-
 // toggle icon navbar
 let menuIcon = document.querySelector('#menu-icon');
 let navbar = document.querySelector('.navbar');
@@ -62,7 +54,6 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
-
 
 
 
